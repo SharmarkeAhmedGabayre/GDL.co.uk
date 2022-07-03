@@ -1,0 +1,157 @@
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  background-color: #ACC0BE;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  display: flex;
+  flex: row;
+  justify-self: center;
+  align-items: center;
+}
+
+.banner-container {
+  display: flex;
+  width: 40%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  width: 60%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  display: flex;
+  width: 60%;
+  height: 70px;
+  position: fixed;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 6;
+}
+
+.nav-button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  font-size: 24px;
+
+  &:hover {
+    color: wheat;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.8s ease;
+  }
+
+}
+
+.nav-button-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: wheat;
+  transition: left 0.3s ease;
+}
+
+.showcase_About,
+.showcase_Projects,
+.showcase_Skills,
+.showcase_Contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+
+  p {
+    margin: 1em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+}
+
+.showcase_About {
+  position: sticky;
+  background: rgb(241, 241, 241);
+}
+
+.showcase_Projects {
+  position: sticky;
+  background: rgb(0, 0, 0);
+  color: wheat;
+}
+
+.showcase_Skills {
+  position: sticky;
+  background: rgb(241, 241, 241);
+}
+
+.showcase_Contact {
+  position: sticky;
+  background: rgb(0, 0, 0);
+  color: wheat;
+}
+
+//Responsive stuff
+@media (max-width: 896px) {
+  .main-container {
+    display: block;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .banner-container {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  .content-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
