@@ -34,13 +34,12 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .nav-bar {
   display: flex;
   width: 60%;
-  height: 70px;
+  height: 8vh;
   position: fixed;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   background: #fff;
@@ -57,7 +56,7 @@ a {
 }
 .nav-button:hover {
   color: wheat;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(0, 0, 0);
   transition: all 0.8s ease;
 }
 
@@ -76,16 +75,14 @@ a {
 .showcase_Contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   min-height: 100vh;
   text-align: left;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
+  top: 8vh;
 }
 .showcase_About p,
 .showcase_Projects p,
@@ -109,29 +106,30 @@ a {
 }
 
 .showcase_About {
-  position: -webkit-sticky;
-  position: sticky;
   background: rgb(241, 241, 241);
 }
 
 .showcase_Projects {
-  position: -webkit-sticky;
-  position: sticky;
   background: rgb(0, 0, 0);
   color: wheat;
 }
 
 .showcase_Skills {
-  position: -webkit-sticky;
-  position: sticky;
   background: rgb(241, 241, 241);
 }
 
 .showcase_Contact {
-  position: -webkit-sticky;
-  position: sticky;
   background: rgb(0, 0, 0);
   color: wheat;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 10px;
 }
 
 @media (max-width: 896px) {
