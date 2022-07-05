@@ -4,6 +4,12 @@ body {
   background-color: #ACC0BE;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -33,7 +39,10 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow-y: scroll;
+}
+
+.banner {
+  position: fixed;
 }
 
 .nav-bar {
@@ -56,19 +65,15 @@ a {
 
   &:hover {
     color: wheat;
-    background: rgba(0, 0, 0);
+    background: #323f3e;
     transition: all 0.8s ease;
   }
 
 }
 
-.nav-button-slider {
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 6px;
-  background: wheat;
-  transition: left 0.3s ease;
+.clicked {
+  color: wheat;
+  background: #323f3e;
 }
 
 .showcase_About,
@@ -77,35 +82,36 @@ a {
 .showcase_Contact {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100vh;
   text-align: left;
   position: sticky;
-  top: 8vh;
-  
+  top: 0;
+
   p {
-    margin: 1em;
+    margin: 2em;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 4rem;
     margin: 0;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 3rem;
     opacity: 0.6;
   }
 }
 
 .showcase_About {
   background: rgb(241, 241, 241);
+
 }
 
 .showcase_Projects {
-  background: rgb(0, 0, 0);
+  background: #323f3e;
   color: wheat;
 }
 
@@ -114,11 +120,11 @@ a {
 }
 
 .showcase_Contact {
-  background: rgb(0, 0, 0);
+  background: #323f3e;
   color: wheat;
 }
 
-.section-container{
+.section-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

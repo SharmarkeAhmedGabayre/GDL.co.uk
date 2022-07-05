@@ -1,20 +1,45 @@
 
 $(document).ready(function () {
-    $('.nav-button').click(function (e) {
+    var about = 0;
+    var projects = 1000;
+    var skills = 2100;
+    var contact = 3200;
+    var currentActive, prevActive = null;
 
-        var navBarHeight = $('.nav-bar').outerHeight();
+    $('.nav-button').click(function (e) {
+        var yValue = 0;
         var clickedRef = $(this).attr('href');
-        var anchor = clickedRef.replace('#', '');
-        var yValue = $(clickedRef).offset().top;
+        currentActive = clickedRef;
+        switch (clickedRef) {
+            case "#About":
+                yValue = about;
+                break;
+            case "#Projects":
+                yValue = projects;
+                break;
+            case "#Skills":
+                yValue = skills;
+                break;
+            case "#Contact":
+                yValue = contact;
+                break;
+        }
+
+        if (currentActive != prevActive) {
+            $(currentActive).addClass('.clicked');
+            $(prevActive).removeClass('.clicked');
+        }
+        prevActive = currentActive;
 
         $('html,body').stop().animate(
             {
-                scrollTop: yValue - navBarHeight
+                scrollTop: yValue
             }, 800
         );
 
-        console.log(yValue);
-        console.log(anchor);
         e.preventDefault();
+        console.log(currentActive);
     });
+
 });
+
